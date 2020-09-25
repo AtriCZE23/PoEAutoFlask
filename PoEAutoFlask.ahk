@@ -16,13 +16,13 @@
 ;----------------------------------------------------------------------
 #IfWinActive Path of Exile
 #SingleInstance force
-#NoEnv  
-#Warn  
-#Persistent 
+#NoEnv
+#Warn
+#Persistent
 
 FlaskDurationInit := []
 ;----------------------------------------------------------------------
-; Set the duration of each flask, in ms, below.  For example, if the 
+; Set the duration of each flask, in ms, below.  For example, if the
 ; flask in slot 3 has a duration of "Lasts 4.80 Seconds", then use:
 ;		FlaskDurationInit[3] := 4800
 ;
@@ -49,7 +49,7 @@ LastRightClick := 0
 ; using alt-c.  The coordinates for ix,iy come from MouseGetPos (Alt+g)
 ; of the top left location in the inventory screen.  The delta is the
 ; pixel change to the next box, either down or right.
-; 
+;
 ; To get the correct values for use below, do the following:
 ;	1. Load the macro into AutoHotKey
 ;	2. open Inventory screen (I) and place the mouse cursor in the
@@ -70,7 +70,7 @@ delta    :=   70
 ; As above, you'll use Alt+g to determine the actual values needed.
 ;
 ; To get these values, follow the instructions for the Inventory screen
-; except use the stash tab boxes, instead.  Note, the first COLUMN is 
+; except use the stash tab boxes, instead.  Note, the first COLUMN is
 ; for the 12x12 stash and the second COLUMN is for the 24x24 "Quad" stash.
 ;----------------------------------------------------------------------
 StashX    := [ 60,  40]
@@ -115,7 +115,7 @@ Loop {
 	if UseFlasks {
 		; initialize start of auto-flask use
 		ToolTip, UseFlasks On
-		
+
 		; reset usage timers for all flasks
 		for i in FlaskDurationInit {
 			FlaskLastUsed[i] := 0
@@ -257,7 +257,7 @@ CycleAllFlasksWhenReady:
 
 ;----------------------------------------------------------------------
 ; Alt+m - Allow setting stash tab size as normal (12x12) or large (24x24)
-; 
+;
 ; vMouseRow := 1 (default) means starting in row 1 of stash tab
 ; always place mouse pointer in starting box
 ;
@@ -330,3 +330,5 @@ GuiEscape:
 	Sleep 100
 	MouseMove, x, y
 	Return
+	# pack-refs with: peeled fully-peeled sorted
+	c4a067b9cfd2117b360784ec2ba197b3ec9f7c15 refs/remotes/origin/master
